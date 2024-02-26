@@ -19,11 +19,11 @@ def calcular(numero1, numero2, operacion):
         case '%':
             # Operación residuo
             respuesta = numero1 % numero2
+        case 'r':
+            # Operación raiz
+            respuesta = numero1**(1/numero2)
         case _:
             raise ValueError("Operación inválida.")
-
-
-        # TODO: DEBES COLOCAR TU CÓDIGO AQUÍ# TODO: DEBES CREAR AQUÍ LOS CASES PARA LA OPERACIÓN DE LA POTENCIA Y EL MÓDULO, COMPROBANDO LOS SÍMBOLOS ^ Y %.
 
     return respuesta
 
@@ -34,7 +34,7 @@ if __name__ == '__main__':
     print("Ingrese el número 2")
     numero2 = int(input())
     # TODO: EN LA SIGUIENTE LÍNEA DEBES ADICIONAR EL SÍMBOLO DE ^ Y % PARA QUE LE APAREZCA AL USUARIO.
-    print("Ingrese la operación (+, -, *, /)")
+    print("Ingrese la operación (+, -, *, /, ^, %, r)")
     operacion = input()
 
     resultado = calcular(numero1, numero2, operacion)
